@@ -1,0 +1,12 @@
+*.xcuserstate
+*.xcbkptlist
+
+## User settings
+xcuserdata/
+Pods/
+##Podfile.lock
+## Xcode 8 and earlier
+*.xcscmblueprint
+*.xccheckout
+Gemfile.lock
+Build/XCBuildData/

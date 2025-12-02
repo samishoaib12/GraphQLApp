@@ -1,0 +1,7 @@
+
+query Student {
+   students{
+    id
+    name
+  }
+}
