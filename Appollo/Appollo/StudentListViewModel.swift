@@ -10,9 +10,9 @@ import Student_info
 
 class StudentListViewModel: ObservableObject {
     
-    private let service: GetStudentsCase
+    private let service: StudentsUseCaseProtocol
     @Published var studentList = [StudentQuery.Data.Student]()
-    init(service: GetStudentsCase) {
+    init(service: StudentsUseCaseProtocol) {
         self.service = service
     }
     
@@ -25,6 +25,12 @@ class StudentListViewModel: ObservableObject {
             print("students", students)
         }
 
+    }
+    
+    func insertStudent( name: String, email: String, age: Int, country: String, completion:@escaping(()->Void)) {
+        service.insert(name: name, email: email, age: age, country: country) {
+            completion()
+        }
     }
     
 }

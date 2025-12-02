@@ -5,3 +5,24 @@ query Student {
     name
   }
 }
+
+
+mutation CreateStudent(
+  $name: String!,
+  $email: String!,
+  $age: Int!,
+  $country: String!
+) {
+  createStudent(
+    name: $name,
+    email: $email,
+    age: $age,
+    country: $country
+  ) {
+    id
+    name
+    email
+    age
+    country
+  }
+}

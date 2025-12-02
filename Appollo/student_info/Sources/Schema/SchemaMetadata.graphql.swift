@@ -20,6 +20,7 @@ public enum SchemaMetadata: ApolloAPI.SchemaMetadata {
 
   @_spi(Execution) public static func objectType(forTypename typename: String) -> ApolloAPI.Object? {
     switch typename {
+    case "Mutation": return Student_info.Objects.Mutation
     case "Query": return Student_info.Objects.Query
     case "Student": return Student_info.Objects.Student
     default: return nil

@@ -11,7 +11,10 @@ import SwiftUI
 struct AppolloApp: App {
     var body: some Scene {
         WindowGroup {
-            StudentListView(model: StudentListViewModel(service: GetStudentsCase(repository: StudentRepository())))
+            NavigationStack {
+                StudentListView(model: StudentListViewModel(service: StudentsCase(repository: StudentRepository())))
+            }
+            
         }
     }
 }
